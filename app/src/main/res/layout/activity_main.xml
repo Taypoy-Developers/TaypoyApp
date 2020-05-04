@@ -13,7 +13,7 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
-        app:srcCompat="@drawable/logoSinfondo" />
+        app:srcCompat="@drawable/logoOficial" />
 
     <EditText
         android:id="@+id/editText"
