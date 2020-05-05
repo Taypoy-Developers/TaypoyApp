@@ -6,25 +6,52 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        app:srcCompat="@drawable/logoOficial" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/vegetalesbackground"
+        android:scaleType="centerCrop"/>
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:ems="10"
-        android:background="#11000000"
-        android:textSize="16dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#d8000000"
+        android:gravity="center">
 
-        android:inputType="textPersonName"
-        android:text="Name" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="30dp"
+            app:srcCompat="@drawable/logofi" />
+
+        <Button
+            android:id="@+id/iniciar_sesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_redondeado_blanco"
+            android:textColor="#FF5722"
+            android:elevation="5dp"
+            android:textSize="18dp"
+            android:layout_marginBottom="30dp"
+            android:text="Iniciar Sesión"/>
+
+        <Button
+            android:id="@+id/iniciar_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_facebook"
+            android:textColor="#FFFFFF"
+            android:elevation="5dp"
+            android:textSize="16dp"
+            android:layout_marginBottom="30dp"
+            android:text="Iniciar con Facebook"/>
+    </LinearLayout>
 </RelativeLayout>
