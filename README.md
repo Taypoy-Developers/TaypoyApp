@@ -1,5 +1,5 @@
 # TaypoyApp
-Creacion del proyecto
+Gestiona tus alimentos en casa de forma fácil, rápida y nutritiva.
 La primera entrega de este proyecto debe contener:
 Más de dos actividades
 Más de dos interfaces
