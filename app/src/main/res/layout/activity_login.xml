@@ -92,7 +92,8 @@
                 android:text="CREAR CUENTA"
                 android:background="@android:color/transparent"
                 android:layout_marginLeft="10dp"
-                android:textColor="#fff"></Button>
+                android:textColor="#fff"
+                android:id="@+id/btn_go_register"></Button>
 
 
         </LinearLayout>
