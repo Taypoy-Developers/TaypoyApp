@@ -21,15 +21,17 @@
         <ImageView
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:src="@drawable/logotipo"
+            android:src="@drawable/logoletras"
             android:layout_marginBottom="50dp"
             />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/box_correo"
+            android:inputType="textEmailAddress"
             android:hint="Correo Electrónico"
             android:layout_marginBottom="15dp"
+            android:textColor="#fff"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/input"
@@ -51,8 +53,11 @@
             android:paddingRight="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textColorHint="#ccc"/>
-        <EditText
+            android:textColorHint="#ccc"
+            android:textColor="#fff"
+            android:inputType="textPassword"
+            />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#fff"
