@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "693944131302",
+    "firebase_url": "https://taypoy-a6ce0.firebaseio.com",
+    "project_id": "taypoy-a6ce0",
+    "storage_bucket": "taypoy-a6ce0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693944131302:android:f276b97ea3275b545fa527",
+        "android_client_info": {
+          "package_name": "com.example.taypoyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693944131302-ojgnqkq6adcftt00o6mgjguku561su7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACba2bhxySVj7vGSWKnT3u4cBZuXa3Ivc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693944131302-ojgnqkq6adcftt00o6mgjguku561su7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
