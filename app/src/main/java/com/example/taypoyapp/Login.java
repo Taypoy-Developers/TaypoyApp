@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 
+
 public class Login extends AppCompatActivity {
     Button btn_go_register;
     EditText email,password;
@@ -32,7 +33,7 @@ public class Login extends AppCompatActivity {
         email=findViewById(R.id.box_correo);
         password=findViewById(R.id.box_contrasena);
         btn_iniciar_sesion=findViewById(R.id.btn_iniciar_sesion);
-
+        fAuth=FirebaseAuth.getInstance();
         btn_go_register=findViewById(R.id.btn_go_register);
         btn_go_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +60,7 @@ public class Login extends AppCompatActivity {
                                 startActivity(new Intent(Login.this,MainActivity.class));
                             }
                             else {
-                                Toast.makeText(Login.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT ).show();
+                                Toast.makeText(Login.this, "Usuario o contraseña incorrectos "+ task.getException().getMessage(), Toast.LENGTH_SHORT ).show();
                             }
                         }
                     });
