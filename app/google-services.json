@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "693944131302-cbdtet20s2pk7cahef1ae01biu3llmc7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taypoyapp",
+            "certificate_hash": "6bb3a1c2df54ac88fb00517083f89c51804c95f5"
+          }
+        },
+        {
           "client_id": "693944131302-ojgnqkq6adcftt00o6mgjguku561su7m.apps.googleusercontent.com",
           "client_type": 3
         }
