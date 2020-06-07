@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.DatabaseReference;
+
 
 public class Login extends AppCompatActivity {
     Button btn_go_register;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +26,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 
 }
