@@ -48,20 +48,23 @@ public class Login extends AppCompatActivity {
                 if(correo.equals("")){
                     Toast.makeText(Login.this, "Ingrese un correo", Toast.LENGTH_SHORT).show();
                 }
-                if(contrasena.equals("")){
+                else if(contrasena.equals("")){
                     Toast.makeText(Login.this, "Ingrese una contraseña", Toast.LENGTH_SHORT).show();
+                } else{
+                    fAuth.signInWithEmailAndPassword(correo,contrasena).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(Login.this,MainActivity.class));
+                            }
+                            else {
+                                Toast.makeText(Login.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT ).show();
+                            }
+                        }
+                    });
                 }
-                fAuth.signInWithEmailAndPassword(correo,contrasena).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Toast.makeText(Login.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT ).show();
-                        }
-                    }
-                });
+
 
 
             }
