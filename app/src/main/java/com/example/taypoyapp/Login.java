@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
     EditText email,password,username;
     FirebaseAuth fAuth;
     Button btn_iniciar_sesion;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

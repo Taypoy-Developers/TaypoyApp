@@ -22,6 +22,11 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:gravity="top"
+            android:text="TextView"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:layout_marginTop="-310dp"
+            tools:ignore="RtlCompat" />
     </LinearLayout>
 </RelativeLayout>
