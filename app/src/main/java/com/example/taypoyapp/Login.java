@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 
 public class Login extends AppCompatActivity {
     Button btn_go_register;
-    EditText email,password;
+    EditText email,password,username;
     FirebaseAuth fAuth;
     Button btn_iniciar_sesion;
 
@@ -32,6 +33,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         email=findViewById(R.id.box_correo);
         password=findViewById(R.id.box_contrasena);
+        username=findViewById(R.id.box_nic);
         btn_iniciar_sesion=findViewById(R.id.btn_iniciar_sesion);
         fAuth=FirebaseAuth.getInstance();
         btn_go_register=findViewById(R.id.btn_go_register);
@@ -46,6 +48,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 String correo=email.getText().toString();
                 String contrasena=password.getText().toString();
+                final String nicname=username.getText().toString();
                 if(correo.equals("")){
                     Toast.makeText(Login.this, "Ingrese un correo", Toast.LENGTH_SHORT).show();
                 }
@@ -56,8 +59,15 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                //preferencias
+                                SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putString("username", nicname);
+                                editor.putBoolean("isLoged", true);
+                                editor.apply();
+                                //preferencias
                                 Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Login.this,MainActivity.class));
+                                startActivity (new Intent(Login.this,CrearLista.class));
                             }
                             else {
                                 Toast.makeText(Login.this, "Usuario o contraseña incorrectos "+ task.getException().getMessage(), Toast.LENGTH_SHORT ).show();
@@ -71,7 +81,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-    }
 
+    }
 
 }

@@ -18,5 +18,10 @@
         android:background="#d8000000"
         android:gravity="center">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
     </LinearLayout>
 </RelativeLayout>
