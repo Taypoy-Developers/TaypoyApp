@@ -46,7 +46,7 @@
             android:layout_marginTop="40dp"
             android:gravity="center_horizontal"
             android:textStyle="normal|italic"
-            android:outlineAmbientShadowColor="@color/white">
+            android:outlineSpotShadowColor="@color/white">
 
             <TextView
                 android:id="@+id/texto_info"
@@ -58,52 +58,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/seccion_frutas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp"
-            android:gravity="center_horizontal"
-            android:textStyle="normal|italic"
-            android:outlineAmbientShadowColor="@color/white">
-
-            <TextView
-                android:id="@+id/texto_info2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FRUTAS:"
-                android:textColor="@color/white"
-                android:textStyle="normal|bold|italic"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:id="@+id/seccion_verduras"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp"
-            android:gravity="center_horizontal"
-            android:textStyle="normal|italic"
-            android:outlineAmbientShadowColor="@color/white">
-
-            <TextView
-                android:id="@+id/texto_info3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="VERDURAS:"
-                android:textColor="@color/white"
-                android:textStyle="normal|bold|italic"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        </LinearLayout>
-
-
     </LinearLayout>
 </RelativeLayout>
 
