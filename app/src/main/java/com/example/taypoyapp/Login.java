@@ -68,7 +68,7 @@ public class Login extends AppCompatActivity {
                                 editor.apply();
                                 //preferencias
                                 Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                                startActivity (new Intent(Login.this, CrearLista.class));
+                                startActivity (new Intent(Login.this, SplashScreen.class));
                             }
                             else {
                                 Toast.makeText(Login.this, "Usuario o contraseña incorrectos "+ task.getException().getMessage(), Toast.LENGTH_SHORT ).show();
