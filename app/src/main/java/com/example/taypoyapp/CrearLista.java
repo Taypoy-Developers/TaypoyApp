@@ -4,12 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 public class CrearLista extends AppCompatActivity {
-
+    private EditText editTextInput;
     public static String[] CARNES ={
             "Pollo",
             "Carne de Res",
@@ -41,7 +48,7 @@ public class CrearLista extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_lista);
-
+        editTextInput = (EditText) findViewById(R.id.editTextInput);
         SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
         String username = prefs.getString("username", String.valueOf(findViewById(R.id.box_nic)));
 
@@ -78,6 +85,20 @@ public class CrearLista extends AppCompatActivity {
             seccion_verduras.addView(opcion3);
         }
 
-
+        Button search= (Button) findViewById(R.id.button1);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                    String term = editTextInput.getText().toString();
+                    intent.putExtra(SearchManager.QUERY, term);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
+            }
+        });
     }
+
 }
