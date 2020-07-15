@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/search_bar"
+        style="@style/MaterialSearchBarDark"
+        app:mt_speechMode="true"
+        app:mt_hint="Custom hint"
+        app:mt_maxSuggestionsCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <RadioButton
+            android:id="@+id/rdi_youtube"
+            android:text="Youtube"
+            android:checked="true"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            />
+        <RadioButton
+            android:id="@+id/rdi_google"
+            android:text="Google"
+            android:checked="true"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            />
+    </RadioGroup>
+</RelativeLayout>

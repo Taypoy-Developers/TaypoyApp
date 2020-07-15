@@ -43,6 +43,9 @@
             </intent-filter>
             -->
         </activity>
+        <activity android:name=".Intento_SearchBar"></activity>
+
+
     </application>
 
 </manifest>
