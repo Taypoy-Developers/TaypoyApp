@@ -30,8 +30,6 @@
             android:exported="true"/>
         <activity android:name=".Login" />
         <activity android:name=".Register" />
-        <activity android:name=".GoogleSearchIntentActivity"
-            android:exported="true"/>
         <activity android:name=".MainActivity">
 
 
@@ -43,7 +41,6 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".Intento_SearchBar"></activity>
 
 
     </application>

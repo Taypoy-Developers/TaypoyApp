@@ -48,7 +48,6 @@ public class CrearLista extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_lista);
-        editTextInput = (EditText) findViewById(R.id.editTextInput);
         SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
         String username = prefs.getString("username", String.valueOf(findViewById(R.id.box_nic)));
 
@@ -85,20 +84,7 @@ public class CrearLista extends AppCompatActivity {
             seccion_verduras.addView(opcion3);
         }
 
-        Button search= (Button) findViewById(R.id.button1);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-                    String term = editTextInput.getText().toString();
-                    intent.putExtra(SearchManager.QUERY, term);
-                    startActivity(intent);
-                } catch (Exception e) {
-                    // TODO: handle exception
-                }
-            }
-        });
+
     }
 
 }
