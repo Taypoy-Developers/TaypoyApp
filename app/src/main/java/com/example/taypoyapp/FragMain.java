@@ -22,7 +22,6 @@ import Fragments.RecipesFragment;
 public class FragMain extends AppCompatActivity {
 
     BottomNavigationView mBottomNavigation;
-    VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
