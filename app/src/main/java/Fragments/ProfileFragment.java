@@ -23,7 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
-
+    private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,7 +33,7 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    FirebaseAuth firebaseAuth;
+
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -74,12 +75,10 @@ public class ProfileFragment extends Fragment {
         EditText phone = (EditText) rootView.findViewById(R.id.phone_editText);
         EditText email = (EditText) rootView.findViewById(R.id.email_editText);
         EditText from_login = (EditText) rootView.findViewById(R.id.box_correo);
-        DatabaseReference databaseReference;
-        FirebaseDatabase firebaseDatabase;
-        FirebaseUser user =  firebaseAuth.getCurrentUser();
-        name.setText(user.getDisplayName());
-        phone.setText(user.getPhoneNumber());
-        email.setText(user.getEmail());
+        mUser = mAuth.getCurrentUser();
+        name.setText(mUser.getDisplayName());
+        phone.setText(mUser.getPhoneNumber());
+        email.setText(mUser.getEmail());
         return rootView;
     }
 
