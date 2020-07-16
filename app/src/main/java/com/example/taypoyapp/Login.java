@@ -19,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
+import Fragments.HomeFragment;
 
 
 public class Login extends AppCompatActivity {
@@ -68,7 +69,7 @@ public class Login extends AppCompatActivity {
                                 editor.apply();
                                 //preferencias
                                 Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                                startActivity (new Intent(Login.this, SplashScreen.class));
+                                startActivity (new Intent(Login.this, HomeFragment.class));
                             }
                             else {
                                 Toast.makeText(Login.this, "Usuario o contraseña incorrectos "+ task.getException().getMessage(), Toast.LENGTH_SHORT ).show();

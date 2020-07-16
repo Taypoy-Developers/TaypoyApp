@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemReselectedListener;
 import Fragments.GameFragment;
 import Fragments.HomeFragment;
 import Fragments.ProfileFragment;
@@ -31,7 +31,7 @@ public class FragMain extends AppCompatActivity {
         mBottomNavigation.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             /*ESTO DEBERIA SER UN VOID*/
-            public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
+            public boolean onNavigationItemReselected(@NonNull MenuItem menuItem) {
 
                 if(menuItem.getItemId() == R.id.menu_home){
                     showSelectedFragment(new HomeFragment());
@@ -45,7 +45,7 @@ public class FragMain extends AppCompatActivity {
                 if(menuItem.getItemId() == R.id.menu_game){
                     showSelectedFragment(new GameFragment());
                 }
-                /*return true;*/
+                return true;
             }
         });
     }
