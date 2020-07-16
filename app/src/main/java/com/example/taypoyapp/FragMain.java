@@ -28,11 +28,9 @@ public class FragMain extends AppCompatActivity {
 
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
 
-        mBottomNavigation.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            /*ESTO DEBERIA SER UN VOID*/
-            public boolean onNavigationItemReselected(@NonNull MenuItem menuItem) {
-
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if(menuItem.getItemId() == R.id.menu_home){
                     showSelectedFragment(new HomeFragment());
                 }
