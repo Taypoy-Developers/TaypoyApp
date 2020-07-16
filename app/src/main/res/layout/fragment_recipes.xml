@@ -9,5 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="AQUI VAN LAS RECETAS DE FIREBASE"/>
-
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vid"
+        tools:ignore="MissingConstraints" />
 </FrameLayout>

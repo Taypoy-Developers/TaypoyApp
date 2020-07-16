@@ -30,12 +30,7 @@ public class FragMain extends AppCompatActivity {
         setContentView(R.layout.activity_frag_main);
         showSelectedFragment(new HomeFragment());
         MediaController mediaController= new MediaController(this);
-        videoView=findViewById(R.id.vid);
-        videoView.setMediaController(mediaController);
-        mediaController.setAnchorView(videoView);
-        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/taypoy-a6ce0.appspot.com/o/ADOBO%20DE%20CHANCHO%20%20RECETA%20PERUANA%20%20Sazn%20y%20Corazn.mp4?alt=media&token=3a1ed70d-1a6b-4253-b99c-3f7849ea1c3e");
-        videoView.setVideoURI(uri);
-        videoView.start();
+
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
 
         mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

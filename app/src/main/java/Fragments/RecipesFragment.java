@@ -1,16 +1,18 @@
 package Fragments;
 
+
 import android.net.Uri;
 import android.os.Bundle;
-
+import com.example.taypoyapp.*;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.taypoyapp.R;
 
 /**
@@ -70,15 +72,29 @@ public class RecipesFragment extends Fragment {
 
         }
 
+        
+
+
+
+
 
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recipes, container, false);
-
+        View rootView = inflater.inflate(R.layout.fragment_recipes, container, false);
+        VideoView videoView = (VideoView) rootView.findViewById(R.id.vid);
+        MediaController mediaController = new MediaController(getActivity());
+        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/taypoy-a6ce0.appspot.com/o/ADOBO%20DE%20CHANCHO%20%20RECETA%20PERUANA%20%20Sazn%20y%20Corazn.mp4?alt=media&token=3a1ed70d-1a6b-4253-b99c-3f7849ea1c3e");
+        videoView.setVideoURI(uri);
+        videoView.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView);
+        videoView.start();
+        return rootView;
 
     }
 }
