@@ -77,9 +77,9 @@ public class ProfileFragment extends Fragment {
         DatabaseReference databaseReference;
         FirebaseDatabase firebaseDatabase;
         FirebaseUser user =  firebaseAuth.getCurrentUser();
-        name.setText(user.getDisplayName().toString());
-        phone.setText(user.getPhoneNumber().toString());
-        email.setText(user.getEmail().toString());
+        name.setText(user.getDisplayName());
+        phone.setText(user.getPhoneNumber());
+        email.setText(user.getEmail());
         return rootView;
     }
 
