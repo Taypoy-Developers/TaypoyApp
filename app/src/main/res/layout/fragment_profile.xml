@@ -16,26 +16,26 @@
         android:text="Bienvenido a tu perfil"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="45dp"
-        android:id="@+id/name_editText"
+        android:id="@+id/name_editText_frag"
         />
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="95dp"
-        android:id="@+id/phone_editText"
+        android:id="@+id/phone_editText_frag"
         />
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="145dp"
-        android:id="@+id/email_editText"
+        android:id="@+id/email_editText_frag"
         />
 
 
