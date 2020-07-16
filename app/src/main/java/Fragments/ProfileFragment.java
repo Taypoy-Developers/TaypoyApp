@@ -31,7 +31,7 @@ public class ProfileFragment extends Fragment {
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     private DatabaseReference databaseReference;
-    private TextView name, phone, email;
+    private EditText name, phone, email;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -79,9 +79,9 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
-        name = (TextView) rootView.findViewById(R.id.name_editText_frag);
-        phone = (TextView) rootView.findViewById(R.id.phone_editText_frag);
-        email = (TextView) rootView.findViewById(R.id.email_editText_frag);
+        name = (EditText) rootView.findViewById(R.id.name_editText_frag);
+        phone = (EditText) rootView.findViewById(R.id.phone_editText_frag);
+        email = (EditText) rootView.findViewById(R.id.email_editText_frag);
         mAuth= FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         final String user_id = mUser.getUid();
