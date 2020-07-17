@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorAccent"
             android:textSize="14sp"
-            android:text="NicName"
+            android:text="nicname"
             android:layout_below="@+id/txtdashboard"/>
 
         <ImageButton
@@ -89,7 +89,8 @@
                 app:layout_constraintDimensionRatio="H, 1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/layoutDesayuno">
+                app:layout_constraintStart_toEndOf="@id/layoutDesayuno"
+                >
 
                 <ImageView
                     android:layout_width="130dp"
