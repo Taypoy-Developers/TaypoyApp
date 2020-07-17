@@ -1,8 +1,10 @@
+// Proyecto Taypoy
+// Fecha: 17/07/2020
 // Alumnos:
-// Avendaño
-// Cardenas
-// Santos
-// Rodriguez
+// Christopher Bryan Avendaño Llanque
+// Cardenas Rodriguez Fabrizzio Jorge
+// Santos Pamo Bruno Andre
+// Juan Ignacio Rodríguez Núñez
 package Fragments;
 
 import android.os.Bundle;
