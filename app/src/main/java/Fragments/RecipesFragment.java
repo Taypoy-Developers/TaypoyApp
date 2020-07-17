@@ -30,7 +30,7 @@ public class RecipesFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private String urii;
+    private String urii = "https://firebasestorage.googleapis.com/v0/b/taypoy-a6ce0.appspot.com/o/ADOBO%20DE%20CHANCHO%20%20RECETA%20PERUANA%20%20Sazn%20y%20Corazn.mp4?alt=media&token=3a1ed70d-1a6b-4253-b99c-3f7849ea1c3e";
 
 
 
@@ -91,7 +91,7 @@ public class RecipesFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_recipes, container, false);
         VideoView videoView = (VideoView) rootView.findViewById(R.id.vid);
-        TextView temp = (TextView) rootView.findViewById(R.id.for_message);
+        //TextView temp = (TextView) rootView.findViewById(R.id.for_message);
         //Bundle bundle = this.getArguments();
         //urii=bundle.getString("mensaje");
 
@@ -105,8 +105,8 @@ public class RecipesFragment extends Fragment {
 
     }
 
-    public void getDataFragments(String msg){
+    /*public void getDataFragments(String msg){
         urii=msg;
-    }
+    }*/
 
 }

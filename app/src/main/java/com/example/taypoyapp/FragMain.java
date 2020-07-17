@@ -22,7 +22,7 @@ import Fragments.HomeFragment;
 import Fragments.ProfileFragment;
 import Fragments.RecipesFragment;
 
-public class FragMain extends AppCompatActivity implements SendMessage {
+public class FragMain extends AppCompatActivity {
 
     BottomNavigationView mBottomNavigation;
 
@@ -32,9 +32,9 @@ public class FragMain extends AppCompatActivity implements SendMessage {
         setContentView(R.layout.activity_frag_main);
         showSelectedFragment(new HomeFragment());
         MediaController mediaController= new MediaController(this);
-        Intent intent = getIntent();
-        String message = intent.getStringExtra("message");
-        getSupportFragmentManager().beginTransaction().add(R.id.for_message, new HomeFragment()).commit();
+        //Intent intent = getIntent();
+        //String message = intent.getStringExtra("message");
+        //getSupportFragmentManager().beginTransaction().add(R.id.for_message, new HomeFragment()).commit();
 
 
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
@@ -66,11 +66,11 @@ public class FragMain extends AppCompatActivity implements SendMessage {
                 .commit();
     }
 
-    @Override
+    /*@Override
     public void sendData(String message) {
         RecipesFragment recipesFragment = (RecipesFragment) getSupportFragmentManager().findFragmentById(R.id.container);
         recipesFragment.getDataFragments(message);
 
 
-    }
+    }*/
 }
