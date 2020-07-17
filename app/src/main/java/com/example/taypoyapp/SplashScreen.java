@@ -1,8 +1,10 @@
+// Proyecto Taypoy
+// Fecha: 17/07/2020
 // Alumnos:
-// Avendaño
-// Cardenas
-// Santos
-// Rodriguez
+// Christopher Bryan Avendaño Llanque
+// Cardenas Rodriguez Fabrizzio Jorge
+// Santos Pamo Bruno Andre
+// Juan Ignacio Rodríguez Núñez
 package com.example.taypoyapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
+import Fragments.HomeFragment;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -29,7 +33,7 @@ public class SplashScreen extends AppCompatActivity {
                     e.printStackTrace();
                 }finally {
                     if (isloged == true) {
-                        Intent i = new Intent(SplashScreen.this, CrearLista.class);
+                        Intent i = new Intent(SplashScreen.this, HomeFragment.class);
                         startActivity(i);
                     } else {
                         Intent i = new Intent(SplashScreen.this, MainActivity.class);

@@ -29,9 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CrearLista"
-            android:exported="true" />
         <activity android:name=".Login" />
         <activity android:name=".Register" />
         
