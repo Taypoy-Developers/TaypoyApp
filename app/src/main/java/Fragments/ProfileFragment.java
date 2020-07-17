@@ -82,5 +82,4 @@ public class ProfileFragment extends Fragment {
         email.setText(user.getEmail());
         return rootView;
     }
-
 }
