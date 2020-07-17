@@ -29,7 +29,7 @@ public class RecipesFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    private String urii;
 
 
 
@@ -72,6 +72,7 @@ public class RecipesFragment extends Fragment {
 
         }
 
+
         
 
 
@@ -86,10 +87,11 @@ public class RecipesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        urii = getArguments().getString("message");
         View rootView = inflater.inflate(R.layout.fragment_recipes, container, false);
         VideoView videoView = (VideoView) rootView.findViewById(R.id.vid);
         MediaController mediaController = new MediaController(getActivity());
-        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/taypoy-a6ce0.appspot.com/o/ADOBO%20DE%20CHANCHO%20%20RECETA%20PERUANA%20%20Sazn%20y%20Corazn.mp4?alt=media&token=3a1ed70d-1a6b-4253-b99c-3f7849ea1c3e");
+        Uri uri = Uri.parse(urii);
         videoView.setVideoURI(uri);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);

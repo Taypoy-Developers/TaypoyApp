@@ -67,7 +67,9 @@
                     android:layout_height="130dp"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:src="@drawable/desayuno"/>
+                    android:src="@drawable/desayuno"
+                    android:onClick="sendURLforfoodAlmuerzo"
+                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

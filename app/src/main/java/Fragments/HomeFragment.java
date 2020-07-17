@@ -1,10 +1,14 @@
 package Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.taypoyapp.FragMain;
+import com.example.taypoyapp.MainActivity;
 import com.example.taypoyapp.R;
 
 /**
@@ -53,6 +57,7 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -60,5 +65,14 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+
+
+    public void sendURLforfoodAlmuerzo(View view) {
+        Intent intent = new Intent(getActivity().getBaseContext(),
+                FragMain.class);
+        intent.putExtra("message", "https://firebasestorage.googleapis.com/v0/b/taypoy-a6ce0.appspot.com/o/ADOBO%20DE%20CHANCHO%20%20RECETA%20PERUANA%20%20Sazn%20y%20Corazn.mp4?alt=media&token=3a1ed70d-1a6b-4253-b99c-3f7849ea1c3e");
+        getActivity().startActivity(intent);
     }
 }

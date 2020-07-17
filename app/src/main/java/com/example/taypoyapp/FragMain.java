@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.content.ReceiverCallNotAllowedException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -29,6 +32,13 @@ public class FragMain extends AppCompatActivity {
         setContentView(R.layout.activity_frag_main);
         showSelectedFragment(new HomeFragment());
         MediaController mediaController= new MediaController(this);
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("message");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("message","FragMain");
+        RecipesFragment fragobj = new RecipesFragment();
+        fragobj.setArguments(bundle);
 
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
 
