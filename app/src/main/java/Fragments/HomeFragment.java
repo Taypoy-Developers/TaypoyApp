@@ -23,7 +23,7 @@ import com.example.taypoyapp.SendMessage;
  *
  */
 public class HomeFragment extends Fragment {
-    SendMessage sendMessage;
+    //SendMessage sendMessage;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -71,8 +71,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Activity activity = getActivity();
-        sendMessage = (SendMessage) activity;
+        //Activity activity = getActivity();
+        //sendMessage = (SendMessage) activity;
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
@@ -80,7 +80,7 @@ public class HomeFragment extends Fragment {
 
     public void sendURLforfoodAlmuerzo(View view) {
 
-        sendMessage.sendData(vid_almuerzo);
+        //sendMessage.sendData(vid_almuerzo);
     }
     /*
     @Override
