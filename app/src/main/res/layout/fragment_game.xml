@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AQUI VA EL JUEGO DE UNITY"
+        android:text="UNITY"
         android:gravity="center"/>
 
 </FrameLayout>

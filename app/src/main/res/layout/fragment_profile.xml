@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="45dp"
+        android:text="Pedrito"
         android:id="@+id/name_editText_frag"
         />
     <EditText
@@ -25,6 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="95dp"
+        android:text="934725168"
+
         android:id="@+id/phone_editText_frag"
         />
     <EditText
@@ -32,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="145dp"
+        android:text="brunosantospamo@gmail.com"
         android:id="@+id/email_editText_frag"
         />
     <Button
