@@ -1,3 +1,9 @@
+// Alumnos:
+// Avendaño
+// Cardenas
+// Santos
+// Rodriguez
+
 package com.example.taypoyapp;
 
 import androidx.annotation.NonNull;
