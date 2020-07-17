@@ -74,11 +74,6 @@ public class RecipesFragment extends Fragment {
         }
 
 
-        
-
-
-
-
 
     }
 
