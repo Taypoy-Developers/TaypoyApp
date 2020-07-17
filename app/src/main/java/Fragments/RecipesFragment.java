@@ -92,8 +92,9 @@ public class RecipesFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_recipes, container, false);
         VideoView videoView = (VideoView) rootView.findViewById(R.id.vid);
         TextView temp = (TextView) rootView.findViewById(R.id.for_message);
-        Bundle bundle = this.getArguments();
-        urii=bundle.getString("mensaje");
+        //Bundle bundle = this.getArguments();
+        //urii=bundle.getString("mensaje");
+
         MediaController mediaController = new MediaController(getActivity());
         Uri uri = Uri.parse(urii);
         videoView.setVideoURI(uri);
@@ -102,6 +103,10 @@ public class RecipesFragment extends Fragment {
         videoView.start();
         return rootView;
 
+    }
+
+    public void getDataFragments(String msg){
+        urii=msg;
     }
 
 }

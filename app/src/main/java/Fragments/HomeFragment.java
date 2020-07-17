@@ -23,16 +23,14 @@ import com.example.taypoyapp.SendMessage;
  *
  */
 public class HomeFragment extends Fragment {
-    private HomeFragListener listener;
-    public interface HomeFragListener{
-        void onInputASent(String input);
-    }
+    SendMessage sendMessage;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private String vid_almuerzo ="https://firebasestorage.googleapis.com/v0/b/taypoy-a6ce0.appspot.com/o/ADOBO%20DE%20CHANCHO%20%20RECETA%20PERUANA%20%20Sazn%20y%20Corazn.mp4?alt=media&token=3a1ed70d-1a6b-4253-b99c-3f7849ea1c3e";
-    SendMessage sendMessage;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -73,18 +71,21 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Activity activity = getActivity();
+        sendMessage = (SendMessage) activity;
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
 
 
     public void sendURLforfoodAlmuerzo(View view) {
-        Bundle bundle = new Bundle();
-        bundle.putString("mensaje", vid_almuerzo);
-        RecipesFragment recipesFragment = new RecipesFragment();
-        recipesFragment.setArguments(bundle);
-        getFragmentManager().beginTransaction().replace(R.id.for_message, recipesFragment).commit();
+
+        sendMessage.sendData(vid_almuerzo);
     }
-
-
+    /*
+    @Override
+    public void onAttach(@NonNull Activity activity) {
+        super.onAttach(activity);
+        sendMessage = (SendMessage) activity;
+    }*/
 }

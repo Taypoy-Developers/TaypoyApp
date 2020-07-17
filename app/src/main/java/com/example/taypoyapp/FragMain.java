@@ -68,7 +68,8 @@ public class FragMain extends AppCompatActivity implements SendMessage {
 
     @Override
     public void sendData(String message) {
-
+        RecipesFragment recipesFragment = (RecipesFragment) getSupportFragmentManager().findFragmentById(R.id.container);
+        recipesFragment.getDataFragments(message);
 
 
     }
